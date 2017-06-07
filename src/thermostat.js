@@ -35,6 +35,14 @@ Thermostat.prototype.decreaseTemperature = function () {
     }
   };
 
+Thermostat.prototype.psmGetter = function () {
+  if (this.psm === true)
+    return "on"
+  else {
+    return "off"
+  }
+};
+
 Thermostat.prototype.reset = function () {
   this.temperature = this.DEFAULT_TEMP;
 };
