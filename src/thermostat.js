@@ -1,6 +1,9 @@
 function Thermostat() {
   this.temperature = 20
   this.psm = true
+  this.MAX_LIMIT_PSM_ON = 25;
+  this.MAX_LIMIT_PSM_OFF = 32;
+  this.DEFAULT_TEMP = 20;
 }
 
 Thermostat.prototype.getCurrentTemperature = function () {
@@ -8,9 +11,9 @@ Thermostat.prototype.getCurrentTemperature = function () {
 };
 
 Thermostat.prototype.increaseTemperature = function () {
-  if (this.psm === true && this.temperature < 25)
+  if (this.psm === true && this.temperature < this.MAX_LIMIT_PSM_ON)
     this.temperature += 1;
-  else if (this.psm === false && this.temperature < 32)
+  else if (this.psm === false && this.temperature < this.MAX_LIMIT_PSM_OFF)
     this.temperature += 1;
   else {
     return "Sorry, go and put a jumper on."
@@ -31,4 +34,9 @@ Thermostat.prototype.decreaseTemperature = function () {
       this.psm = true
     }
   };
+
+Thermostat.prototype.reset = function () {
+  this.temperature = this.DEFAULT_TEMP;
+};
+
 };
