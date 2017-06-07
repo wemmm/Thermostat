@@ -26,4 +26,13 @@ describe('Thermostat', function(){
     thermostat.decreaseTemperature();
     expect(thermostat.getCurrentTemperature()).toEqual(10);
   });
+
+  it('has PSM on by default', function() {
+    expect(thermostat.psm).toEqual(true);
+  });
+
+  it('it can turn PSM off', function() {
+    thermostat.togglePsm();
+    expect(thermostat.psm).toEqual(false);
+  });
 });

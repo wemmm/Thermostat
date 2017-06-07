@@ -1,5 +1,6 @@
 function Thermostat() {
   this.temperature = 20
+  this.psm = true
 }
 
 Thermostat.prototype.getCurrentTemperature = function () {
@@ -16,4 +17,12 @@ Thermostat.prototype.decreaseTemperature = function () {
   else {
     return "Sorry, I can't do that."
   }
+
+  Thermostat.prototype.togglePsm = function () {
+    if (this.psm === true)
+      this.psm = false
+    else {
+      this.psm = true
+    }
+  };
 };
