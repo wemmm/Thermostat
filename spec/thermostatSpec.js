@@ -35,4 +35,10 @@ describe('Thermostat', function(){
     thermostat.togglePsm();
     expect(thermostat.psm).toEqual(false);
   });
+
+  it('has a maximum temperature of twenty-five degrees if PSM is on', function() {
+    thermostat.temperature += 5;
+    thermostat.increaseTemperature();
+    expect(thermostat.getCurrentTemperature()).toEqual(25);
+  });
 });

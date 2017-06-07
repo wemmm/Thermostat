@@ -8,7 +8,13 @@ Thermostat.prototype.getCurrentTemperature = function () {
 };
 
 Thermostat.prototype.increaseTemperature = function () {
-  this.temperature += 1;
+  if (this.psm === true && this.temperature < 25)
+    this.temperature += 1;
+  else if (this.psm === false && this.temperature < 32)
+    this.temperature += 1;
+  else {
+    return "Sorry, go and put a jumper on."
+  }
 };
 
 Thermostat.prototype.decreaseTemperature = function () {
