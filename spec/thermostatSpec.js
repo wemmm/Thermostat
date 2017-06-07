@@ -47,4 +47,22 @@ describe('Thermostat', function(){
     thermostat.reset();
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
+
+  it('it returns high-usage when temperature is above twenty-five degrees', function() {
+    thermostat.togglePsm()
+    thermostat.temperature +=6;
+    expect(thermostat.energyUsage()).toEqual('high-usage');
+  });
+
+  it('returns medium usage when temperature is between twenty-four and eighteen degrees', function() {
+    expect(thermostat.energyUsage()).toEqual('medium-usage');
+  });
+
+  it('it returns low-usage when temperature is under eighteen degrees', function() {
+    thermostat.temperature -=3;
+    expect(thermostat.energyUsage()).toEqual('low-usage');
+  });
+
+
+
 });
