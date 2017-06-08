@@ -29,11 +29,7 @@ Thermostat.prototype.decreaseTemperature = function () {
 };
 
   Thermostat.prototype.togglePsm = function () {
-    if (this.psm === true)
-      this.psm = false
-    else {
-      this.psm = true
-    }
+   this.psm = !this.psm 
   };
 
   Thermostat.prototype.psmGetter = function () {
@@ -50,7 +46,7 @@ Thermostat.prototype.reset = function () {
 Thermostat.prototype.energyUsage = function () {
   if (this.temperature >= 25)
     return "high-usage"
-  else if (this.temperature >= 18 && this.temperature < 25)
+  else if (this.temperature >= 18)
     return "medium-usage"
   else {
     return "low-usage"

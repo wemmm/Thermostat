@@ -12,7 +12,7 @@
   </head>
   <body>
     <section>
-      <h2 id="temperature"></h2>
+			<h2><span id="temperature"></span> ºC</h2>
       <p>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>
@@ -21,6 +21,11 @@
         <button id="power-saving">PSM</button>
       </p>
     </section>
+		<section>
+			<h3 id='weather-status-main'></h3>
+			<h3 id='weather-status-extra'></h3>
+			<span id='weather-status-temp'></span> ªC
+		</section>
     <script src="src/thermostat.js"></script>
     <script src="jquery.js"></script>
     <script src="interface.js"></script>

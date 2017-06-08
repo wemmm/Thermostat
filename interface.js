@@ -1,3 +1,11 @@
+$.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=a012ce56b3fea36ffd408256d4eeb21a', function(data) {
+	//debugger
+	$('#weather-status-main').text(data.weather[0].main);
+	$('#weather-status-extra').text(data.weather[0].description);
+	$('#weather-status-temp').text(Math.round(data.main.temp - 273));
+
+});
+
 $(document).ready(function() { // standard input
   var thermostat = new Thermostat(); // new instance
   updateTemperature();
