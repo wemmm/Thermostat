@@ -1,9 +1,9 @@
 function Thermostat() {
+  this.DEFAULT_TEMP = 20;
+  this.temperature = this.DEFAULT_TEMP;
   this.psm = true;
   this.MAX_LIMIT_PSM_ON = 25;
   this.MAX_LIMIT_PSM_OFF = 32;
-  this.DEFAULT_TEMP = 20;
-  this.temperature = this.DEFAULT_TEMP;
 }
 
 Thermostat.prototype.getCurrentTemperature = function () {
@@ -26,6 +26,7 @@ Thermostat.prototype.decreaseTemperature = function () {
   else {
     return "Sorry, I can't do that."
   }
+};
 
   Thermostat.prototype.togglePsm = function () {
     if (this.psm === true)
@@ -35,13 +36,12 @@ Thermostat.prototype.decreaseTemperature = function () {
     }
   };
 
-Thermostat.prototype.psmGetter = function () {
-  if (this.psm === true)
+  Thermostat.prototype.psmGetter = function () {
+    if (this.psm === true)
     return "on"
-  else {
+    else
     return "off"
-  }
-};
+  };
 
 Thermostat.prototype.reset = function () {
   this.temperature = this.DEFAULT_TEMP;
@@ -55,6 +55,4 @@ Thermostat.prototype.energyUsage = function () {
   else {
     return "low-usage"
   }
-};
-
 };

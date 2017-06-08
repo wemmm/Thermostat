@@ -16,7 +16,7 @@ $(document).ready(function() { // standard input
   })
   $('#power-saving').on('click', function() { // event listener
     thermostat.togglePsm(); // updates the model
-    $('#power_saving_status').text(thermostat.psmGetter);
+    $('#power_saving_status').text(thermostat.psmGetter());
   })
 
 })
