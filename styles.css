@@ -1,0 +1,41 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: linear-gradient(to bottom, #feac5e, #c779d0, #4bc0c8);
+  text-align: center;
+}
+
+h1 {
+    font-family: Helvetica;
+    color: cornsilk;
+}
+
+h2 {
+    font-family: Helvetica;
+    font-size: 100px;
+    color: cornsilk;
+}
+
+p {
+    font-family: Helvetica;
+    color: cyan;
+    font-size: 20px;
+}
+
+.low-usage {
+  color: #038f96;
+}
+
+.medium-usage {
+  color: cornsilk;
+}
+
+.high-usage {
+  color: #960384;
+}
