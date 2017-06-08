@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Hairline');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Outline');
+
 html {
   height: 100%;
 }
@@ -12,25 +18,25 @@ body {
 }
 
 h1 {
-    font-family: Helvetica;
+    font-family: 'Bungee Outline';
     color: cornsilk;
 }
 
 h2 {
-    font-family: Helvetica;
+    font-family: 'Bungee Shade';
     font-size: 100px;
     color: cornsilk;
 }
 
 h3 {
-    font-family: Helvetica;
+    font-family: 'Bungee Hairline';
     color: cornsilk;
 }
 
 p {
-    font-family: Helvetica;
+    font-family: Bungee;
     color: cyan;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .low-usage {
