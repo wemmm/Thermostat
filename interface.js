@@ -2,7 +2,7 @@ $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=a012ce56
 	//debugger
 	$('#weather-status-main').text(data.weather[0].main);
 	$('#weather-status-extra').text(data.weather[0].description);
-	$('#weather-status-temp').text(Math.round(data.main.temp - 273));
+	$('#weather-status-temp').text(Math.round(data.main.temp - 273) + "ºC");
 
 });
 
@@ -27,7 +27,7 @@ $(document).ready(function() { // standard input
     $('#power_saving_status').text(thermostat.psmGetter());
   })
   function updateTemperature() {
-  $('#temperature').text(thermostat.temperature);
+  $('#temperature').text(thermostat.temperature + "ºC");
   $('#temperature').attr('class', thermostat.energyUsage());
 }
 
