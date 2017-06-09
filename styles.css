@@ -5,12 +5,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee+Outline');
 
 html {
-  height: 100%;
+  height: 120%;
 }
 
 body {
   height: 100%;
   margin: 0;
+  background-image: url(https://s10.postimg.org/r5iqslcux/IMG_0494.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background: linear-gradient(to bottom, #feac5e, #c779d0, #4bc0c8);
@@ -20,12 +21,15 @@ body {
 h1 {
     font-family: 'Bungee Outline';
     color: cornsilk;
+    text-shadow: -3px 0 4px #006;
 }
 
 h2 {
     font-family: 'Bungee Shade';
     font-size: 100px;
     color: cornsilk;
+    text-shadow: -3px 0 4px #006;
+
 }
 
 h3 {
@@ -36,7 +40,8 @@ h3 {
 p {
     font-family: Bungee;
     color: cyan;
-    font-size: 22px;
+    font-size: 20px;
+    text-shadow: -3px 0 4px #006;
 }
 
 .low-usage {
@@ -50,3 +55,36 @@ p {
 .high-usage {
   color: #960384;
 }
+
+button {
+    background-color: #4CAF50; /* Green */
+    background: linear-gradient(to right, #ffcf68, #f8ffae);
+    border-style: outset;
+    border-color: cyan;
+    border-radius: 10px;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+select {
+    width: 15%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    background: linear-gradient(to right, #ffcf68, #f8ffae);
+}
+/*
+.status {
+  float: right;
+  margin-right: 300px;
+  margin-top: 150px;
+}
+
+.actualthermostat {
+  float: left
+}*/
